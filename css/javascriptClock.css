@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: black;
+}
+.clock {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(30%) translate(-30%);
+    color: #1DA1F2;
+    font-size: 60px;
+    letter-spacing: 7px;
+}
