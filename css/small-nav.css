@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap');
+body {
+    background: #e6e6e6;
+    font-family: 'Abel', sans-serif;
+}
+.nav-container {
+    font-family: 'Abel', sans-serif;
+    position: relative;
+}
+.top-row {
+    margin-top: 2.5em;
+    height: 3.5rem;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    width: 100%;
+}
+.xs-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sm-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.md-nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.cd {
+    margin-left: 1em;
+    flex-grow: 1;
+    font-family: 'Abel', sans-serif;
+}
+.logo {
+
+    height: 105px;
+    width: 105px;
+}
+.no-gutters {
+    background: #e6e6e6;
+}
+
+h1, h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.circle-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.logo, .circle{
+    width: 108px;
+    height: 108px;
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    margin: 1em;
+}
+.circle, .icon {
+    border-radius: 50%;
+    font-family: "Anton", sans-serif;
+}
+.bg-red {
+    background: #e6563b;
+}
+
+.bg-orange {
+    background: #dea03d;
+}
+
+.bg-green {
+    background: #7cb06c;
+}
+
+.bg-blue {
+    background: #00aba9;
+}
+.card-section1 {
+    display: flex;
+}
+.card-section2 {
+    display: flex;
+}
+.card {
+    width: 18rem;
+    margin: 1em;
+    border: none;
+
+}
+.card-img-top {
+    border: 8px solid #f0f0f0;
+}
+.card-body {
+    background-color: #e6e6e6;
+
+}
+.card-text {
+    flex-grow: 1;
+    margin: none;
+    padding-top: .5em;
+    font-size: 12px;
+}
+.icon {
+    height: 18px;
+    width: 18px;
+}
+.aside-image {
+    width: 60px;
+    height: 60px;
+}
+
+.media-icon {
+    height: 30px;
+    width: 30px;
+}
+.twitter-icon {
+    color: #1DA1F2;
+}
+.font-anton {
+    font-family: "Anton", sans-serif;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .xs-nav-container {
+        display: inline-block;
+    }
+}
+    .sm-nav-container {
+        display: none;
+    }
+    .md-nav-container {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .xs-nav-container {
+        display: inline-block;
+    }
+    .sm-nav-container {
+        display: none;
+    }
+    .md-nav-container {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .xs-nav-container {
+        display: none;
+    }
+    .sm-nav-container {
+        display: none;
+    }
+    .md-nav-container {
+        display: inline-block;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .xs-nav-container {
+        display: none;
+    }
+    .sm-nav-container {
+        display: none;
+    }
+    .md-nav-container {
+        display: inline-block;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .xs-nav-container {
+        display: none;
+    }
+    .sm-nav-container {
+        display: none;
+    }
+    .md-nav-container {
+        display: inline-block;
+    }
+}
