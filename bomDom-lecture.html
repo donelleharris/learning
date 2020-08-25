@@ -21,6 +21,63 @@
 <!--        alert("from server")-->
 <!--    }-->
 <!--</script>-->
+<!--<h1 id="demo"><strong><em>IO Rocks!</em></strong></h1>-->
+<!--<script>-->
+<!--    "use strict";-->
+<!--    (function() {-->
+<!--        var demo = document.getElementById('demo');-->
 
+<!--        console.log(demo); // prints <h1 id="demo">IO Rocks!</h1>-->
+<!--    })();-->
+<!--</script>-->
+<h1>List One</h1>
+<ul>
+    <li class="odd list-one-item">List 1, Item 1</li>
+    <li class="even list-one-item">List 1, Item 2</li>
+</ul>
+<h1>List Two</h1>
+<ul>
+    <li class="odd list-two-item">List 2, Item 1</li>
+    <li class="even list-two-item">List 2, Item 2</li>
+</ul>
+
+<script>
+    "use strict";
+    (function() {
+        // Get all elements with class 'even'
+        var evenElements = document.getElementsByClassName('even');
+
+        // Print the first element
+        alert(evenElements[0].innerHTML); // Prints li.even.list-one-item
+
+        // Print all elements
+        var output = ''
+        for (var i = 0; i < evenElements.length; i++){
+            output += evenElements[i].outerHTML + '\n'
+        }
+        alert(output);
+
+
+        // Prints:
+        // li.even.list-one-item
+        // li.even.list-two-item
+
+        // var listItems = document.getElementsByTagName('li');
+        //
+        // // Print the first list item
+        // alert(listItems[0].innerHTML); // Prints li.odd.list-one-item
+        //
+        // // Print all the list items
+        // for (var a = 0; a < listItems.length; a++) {
+        //     alert(listItems[a].innerHTML);
+        // }
+
+        // Prints
+        // li.odd.list-one-item
+        // li.even.list-one-item
+        // li.odd.list-two-item
+        // li.even.list-two-item
+    })();
+</script>
 </body>
 </html>

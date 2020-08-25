@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM MiniLab 1</title>
+</head>
+<body>
+<p class="a">This paragraph is the first of class a</p>
+<p class="a">This paragraph is the second of class a</p>
+<p class="b">This paragraph is the first of class b</p>
+<p class="b">This paragraph is the second of class b</p>
+
+<script>
+    "use strict";
+    (function() {
+        // Get all elements with class 'a'
+        var aElements = document.getElementsByClassName('a');
+
+        // Print the first element
+        alert(aElements[0].innerHTML);
+
+        // Print all elements
+        var output = ''
+        for (var i = 0; i < aElements.length; i++) {
+        output += aElements[i].outerHTML + '\n'
+        }
+        alert(output);
+    })();
+    (function() {
+        // Get all elements with class 'b'
+        var bElements = document.getElementsByClassName('b');
+
+        // Print the first element
+        alert(bElements[0].innerHTML);
+
+        // Print all elements
+        var output = ''
+        for (var i = 0; i < bElements.length; i++) {
+            output += bElements[i].outerHTML + '\n'
+        }
+        alert(output);
+    })();
+
+</script>
+</body>
+</html>
