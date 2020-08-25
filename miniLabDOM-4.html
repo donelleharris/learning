@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Lab 4</title>
+</head>
+<body bgcolor="#faebd7">
+<p id="p1">To be or not to be?</p>
+<p id="p2" data-playname="Hamlet">That is the question.</p>
+
+<script>
+    'use strict';
+    (function (){
+        //change the stylle of p1 to "font-size: 4rem"
+        let p1 = document.getElementById('p1');
+        p1.setAttribute('style', 'font-size: 4rem');
+
+        let p2 = document.getElementById('p2');
+        let dataAttr = p2.getAttribute('data-playname');
+
+        alert(dataAttr);
+    })();
+</script>
+</body>
+</html>

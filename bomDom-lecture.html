@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>BOM & DOM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="js/bomDom-lecture.js"></script>
 </head>
 <body>
-<h1>BOM & DOM Demo Page</h1>
+<!--<h1>BOM & DOM Demo Page</h1>-->
 <!--<h1>This is a demo page</h1>-->
 <!--<button type="button" onClick="reloadFromCache()">Refresh!</button>-->
 <!--<button type="button" onClick="reloadFromServer()">Refresh!</button>-->
@@ -30,54 +31,145 @@
 <!--        console.log(demo); // prints <h1 id="demo">IO Rocks!</h1>-->
 <!--    })();-->
 <!--</script>-->
-<h1>List One</h1>
-<ul>
-    <li class="odd list-one-item">List 1, Item 1</li>
-    <li class="even list-one-item">List 1, Item 2</li>
-</ul>
-<h1>List Two</h1>
-<ul>
-    <li class="odd list-two-item">List 2, Item 1</li>
-    <li class="even list-two-item">List 2, Item 2</li>
-</ul>
+<!--<h1>List One</h1>-->
+<!--<ul>-->
+<!--    <li class="odd list-one-item">List 1, Item 1</li>-->
+<!--    <li class="even list-one-item">List 1, Item 2</li>-->
+<!--</ul>-->
+<!--<h1>List Two</h1>-->
+<!--<ul>-->
+<!--    <li class="odd list-two-item">List 2, Item 1</li>-->
+<!--    <li class="even list-two-item">List 2, Item 2</li>-->
+<!--</ul>-->
 
-<script>
-    "use strict";
-    (function() {
-        // Get all elements with class 'even'
-        var evenElements = document.getElementsByClassName('even');
+<!--<script>-->
+<!--    "use strict";-->
+<!--    (function() {-->
+<!--        // Get all elements with class 'even'-->
+<!--        var evenElements = document.getElementsByClassName('even');-->
 
-        // Print the first element
-        alert(evenElements[0].innerHTML); // Prints li.even.list-one-item
+<!--        // Print the first element-->
+<!--        alert(evenElements[0].innerHTML); // Prints li.even.list-one-item-->
 
-        // Print all elements
-        var output = ''
-        for (var i = 0; i < evenElements.length; i++){
-            output += evenElements[i].outerHTML + '\n'
-        }
-        alert(output);
+<!--        // Print all elements-->
+<!--        var output = ''-->
+<!--        for (var i = 0; i < evenElements.length; i++){-->
+<!--            output += evenElements[i].outerHTML + '\n'-->
+<!--        }-->
+<!--        alert(output);-->
 
 
-        // Prints:
-        // li.even.list-one-item
-        // li.even.list-two-item
+<!--        Prints:-->
+<!--        li.even.list-one-item-->
+<!--        li.even.list-two-item-->
 
-        // var listItems = document.getElementsByTagName('li');
-        //
-        // // Print the first list item
-        // alert(listItems[0].innerHTML); // Prints li.odd.list-one-item
-        //
-        // // Print all the list items
-        // for (var a = 0; a < listItems.length; a++) {
-        //     alert(listItems[a].innerHTML);
-        // }
+<!--        var listItems = document.getElementsByTagName('li');-->
 
-        // Prints
-        // li.odd.list-one-item
-        // li.even.list-one-item
-        // li.odd.list-two-item
-        // li.even.list-two-item
-    })();
-</script>
+<!--        // Print the first list item-->
+<!--        alert(listItems[0].innerHTML); // Prints li.odd.list-one-item-->
+
+<!--        // Print all the list items-->
+<!--        for (var a = 0; a < listItems.length; a++) {-->
+<!--            alert(listItems[a].innerHTML);-->
+<!--        }-->
+
+<!--        Prints-->
+<!--        li.odd.list-one-item-->
+<!--        li.even.list-one-item-->
+<!--        li.odd.list-two-item-->
+<!--        li.even.list-two-item-->
+<!--    })();-->
+
+<!--</script>-->
+
+<!--<form name="login">-->
+<!--    <div>-->
+<!--        <label for="username">Username</label>-->
+<!--        <input id="username" name="username" type="text" value="user">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label for="password">Password</label>-->
+<!--        <input id="password" name="password" type="password">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <button onclick="saveUsername">Save Username</button>-->
+<!--    </div>-->
+<!--</form>-->
+<!--<br>-->
+<!--<h1 id="out"></h1>-->
+
+<!--<script>-->
+<!--    "use strict";-->
+<!--    let hout = document.getElementById('out');-->
+<!--    (function() {-->
+<!--        // get the "username" input-->
+<!--        var usernameInput = document.forms.login.username;-->
+
+<!--        // log the value of the "username" input-->
+<!--        hout.innerText = usernameInput.value;-->
+<!--    })();-->
+<!--    function saveUsername(){-->
+<!--        var usernameInput = document.forms.login.username;-->
+<!--        console.log(usernameInput.value);-->
+<!--    }-->
+<!--</script>-->
+<!--<form name="login">-->
+<!--    <div>-->
+<!--        <label for="text">Enter some text</label>-->
+<!--        <input id="text" name="sometext" type="text" value="user">-->
+<!--    </div>-->
+<!--</form>-->
+<!--<br>-->
+<!--<button onclick="savetext()">Save Text</button>-->
+<!--<br><br>-->
+<!--<h1 id="out"></h1>-->
+<!--<script>-->
+<!--    "use strict";-->
+<!--    let hout = document.getElementById('out');-->
+<!--    (function() {-->
+<!--        // get the "text" input-->
+<!--        var text = document.forms.login.sometext;-->
+<!--        // log the value of the "Enter some text" input-->
+<!--        hout.innerText = text.value;-->
+<!--    })();-->
+<!--    function savetext() {-->
+<!--        var text = document.forms.login.sometext;-->
+<!--        console.log(text.value);-->
+<!--        hout.innerText = text.value;-->
+
+<!--    }-->
+<!--</script>-->
+
+
+<!--<a href="http://www.yahoo.com" id="search-link" class="btn btn-primary">Web Search</a>-->
+<!--<script>-->
+<!--    "use strict";-->
+<!--    (function() {-->
+<!--        // Get the search link anchor by id-->
+<!--        var searchLink = document.getElementById("search-link");-->
+
+<!--        // Does an element have an attribute?-->
+<!--        console.log(searchLink.hasAttribute("href")); // Prints true-->
+<!--        console.log(searchLink.hasAttribute("class")); // Prints false-->
+
+<!--        // Get an attribute value-->
+<!--        console.log(searchLink.getAttribute("href")); // Prints "http://www.yahoo.com"-->
+
+<!--        // Add or modify an attribute-->
+<!--        searchLink.setAttribute("class", "btn btn-default");-->
+<!--        // Adds the attribute class and sets it to "btn btn-default"-->
+
+<!--        searchLink.setAttribute("href", "http://google.com");-->
+<!--        // Changes the href attribute to "http://google.com"-->
+
+<!--        // Remove an attribute-->
+<!--        searchLink.removeAttribute("class"); // Remove the class attribute-->
+<!--    })();-->
+<!--</script>-->
+
+<!--Bootstrap JS-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

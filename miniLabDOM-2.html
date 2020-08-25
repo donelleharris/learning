@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniLab 2</title>
+</head>
+<body>
+    <h1>Mini Lab 2</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <script>
+        'use strict';
+        (function () {
+           // get all 'p' elements
+            var pElements = document.getElementsByTagName('p');
+
+            var output = '';
+            for (let i = 0; i < pElements.length; i++) {
+                output += pElements[i].innerHTML + '\n'
+            }
+            alert(output);
+        })();
+    </script>
+
+</body>
+</html>
