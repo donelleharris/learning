@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Lab 5</title>
+</head>
+<body>
+    <button id="me">Button</button>
+    <button id="2nd">Button</button>
+    <script>
+        'use strict';
+        var btn1 = document.getElementById('me')
+        var listenToMe = function (event){
+            alert('You clicked the button')
+        }
+        document.getElementById('me').addEventListener('click', listenToMe);
+        var btn2 = document.getElementById('2nd');
+        var removeEvent = function (event){
+            btn1.removeEventListener('click', listenToMe);
+            btn2.innerHTML = 'Event listener removed.'
+        }
+        btn2.addEventListener('click', removeEvent);
+    </script>
+</body>
+</html>
