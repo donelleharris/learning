@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relearning DOM</title>
+</head>
+<body>
+    <h2 id="count"></h2>
+    <script>
+        const heading = document.getElementById('count');
+        function countLine(){
+            let line = '';
+            for (let i = 10; i > 0; i--){
+                line += `This is line#${i} <br>`
+            }
+            return heading.innerHTML = line;
+        }
+
+        let countDown = setInterval(countLine, 1000);
+    </script>
+</body>
+</html>
