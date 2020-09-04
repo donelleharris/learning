@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Lesson 2</title>
+</head>
+<body>
+<p>Please type something into this form:</p>
+<form>
+    <input type="text" id="textfield" name="textfield" placeholder="Type Here"/>
+</form>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    (function () { // IFEE
+        "use strict"
+
+        $().ready(function (){
+            // $('#textfield').keydown(function() {
+            //     alert('A key was pushed down!');
+            // $('#textfield').keyup(function() {
+            //     alert('A key was pushed down!');
+            // $('#textfield').keypress(function() {
+            //     alert('A key was pushed down!');
+            $('#textfield').click(function() {
+                alert('A key was pushed down!');
+                $('p1').click(function (){
+                    $('#textfield').off('keyup');
+                });
+            // $('#textfield').on('keyup', function () {
+            //     alert('A key was released.')
+            });
+        });
+    })();
+</script>
+</body>
+</html>
