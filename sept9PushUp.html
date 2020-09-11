@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Push Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <h5>Please enter your name below:</h5>
+    <input type="text" id="name">
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <h3 id="output"></h3>
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        (function (){ //IIFE (immediately invoked function expression)
+            'use strict';
+            $().ready(function (){
+
+                $('.btn').click(function (){
+                    $('#output').html("Good morning, " + $('input').value())
+                });
+            })
+        })();
+    </script>
+</body>
+</html>
