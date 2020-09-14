@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Assessment Prep</title>
+</head>
+<body>
+<!--
+1. Create some simple HTML markup to practice with.
+2. Choose a type of user-initiated action involving a type of event on a given HTML element.
+3. Choose what will change in the DOM when the action occurs.
+4. Make it happen with some code (with and without jQuery)!
+
+TODO
+An action:** a user clicks on the element with an id of "noun"
+An effect:** the inner text in the element with an id of "noun" will become uppercased
+-->
+<h1>Hello, <span id="noun">Io</span></h1>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    (function (){
+        $().ready(function (){
+            $('#noun').click(function (){
+                $('#noun').css('text-transform', 'uppercase');
+            })
+        })
+    })();
+</script>
+
+</body>
+</html>
