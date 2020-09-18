@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>.map() .filter() .reduce()</h1>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    /* Array.map()
+    Great creating a new array with changed values. */
+    // Example:
+    const names1 = ['justin', 'ViVIAN', 'boB', 'DANIEL', 'tRant'];
+    const convertToTitleCase1 = str => str[0].toUpperCase() + str.substring(1).toLowerCase();
+    const output1 = names1.map(convertToTitleCase1);
+    console.log(output1); // ['Justin', Vivian', 'Bob', 'Daniel', 'Trant'];
+    /**
+     * This map function is an approximate representation of what the Array.prototype.map() method does.
+     * @param array
+     * @param callback
+     * @returns {Array}
+     */
+        // function map(array, callback) {
+        //     let output = [];
+        //     for (let i = 0; i < array.length; i += 1) {
+        //         output.push(callback(array[i]));
+        //     }
+        //     return output;
+        // }
+
+    /* Array.filter()
+    Great for removing elements in an array that fail a given test. */
+    // Example:
+    const names2 = ['Justin', 'Vivian', 'Bob', 'Daniel', 'Trant'];
+    const output2 = names2.filter(name => name !== 'Bob'); // filter out 'Bob'
+    console.log(output2); // ['Justin', 'Vivian', 'Daniel', 'Trant']
+
+    /**
+     * This filter function is an approximate representation of what the Array.prototype.filter() method does.
+     * @param array
+     * @param callback
+     * @returns {Array}
+     */
+        // function filter(array, callback) {
+        //     let output = [];
+        //     for (let i = 0; i < array.length; i += 1) {
+        //         if (callback(array[i])) {
+        //             output.push(array[i]);
+        //         }
+        //     }
+        //     return output;
+        // }
+
+    /* Array.reduce()
+    Great for combining the values of an array together in some way to create data of any type.*/
+    // Example 1:
+    const names3 = ['Justin', 'Vivian', 'Daniel', 'Trant'];
+    const output3 = names3.reduce((greeting, name) => greeting += `${name}, `, 'Welcome: ').slice(0, -2);
+    console.log(output3); // "Welcome Justin, Vivian, Daniel, Trant"
+
+    /**
+     * This reduce function is an approximate representation of what the Array.prototype.reduce() method does.
+     * Unlike the actual array reduce method, this function REQUIRES a default starting value.
+     * @param array
+     * @param callback
+     * @param startingValue
+     * @returns {*}
+     */
+        // function reduce(array, callback, startingValue) {
+        //     let output = startingValue;
+        //     for (let i = 0; i < array.length; i += 1) {
+        //         output = callback(output, array[i]);
+        //     }
+        //     return output;
+        // }
+
+    // ULTRA COMBO!!!!!
+    const names = ['justin', 'ViVIAN', 'boB', 'DANIEL', 'tRant'];
+    const convertToTitleCase2 = str => str[0].toUpperCase() + str.substring(1).toLowerCase();
+    const output = names.map(convertToTitleCase2)
+        .filter(name => name !== 'Bob')
+        .reduce((greeting, name) => greeting += `${name}, `, 'Welcome: ').slice(0, -2);
+    console.log(output);
+
+    // TESTING THE FUNCTIONS
+
+    // const testArray = [1, 2, 3];
+    //
+    // const mapOutput = map(testArray, function(element) {
+    //     return element + 1;
+    // });
+    //
+    // console.log(mapOutput);
+    //
+    // const filterOutput = filter(testArray, function(element) {
+    //     return element !== 2;
+    // });
+    //
+    // console.log(filterOutput);
+    //
+    // const reduceOutput = reduce(testArray, function(accumulator, element) {
+    //     return accumulator + element;
+    // }, 0);
+    //
+    // console.log(reduceOutput);
+
+    //  USING THE ACTUAL ARRAY METHODS
+
+    // const arr = [1, 2, 3];
+    //
+    // const mapMethodOutput = arr.map(function(element) {
+    //     return element + 1;
+    // });
+    //
+    // console.log(mapMethodOutput);
+    //
+    // const filterMethodOutput = arr.filter(function(element) {
+    //     return element !== 2;
+    // });
+    //
+    // console.log(filterMethodOutput);
+    //
+    // const reduceMethodOutput = arr.reduce(function(accumulator, element) {
+    //     return accumulator + element;
+    // }, 0);
+    //
+    // console.log(reduceMethodOutput);
+
+</script>
+</body>
+</html>

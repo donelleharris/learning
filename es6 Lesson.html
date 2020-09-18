@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6 Lesson</title>
+</head>
+<body>
+<ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+
+<script>
+    'use strict';
+
+    // let fName = "Ron"
+    // let lName = "Swanson"
+    // const amount = 30
+    /* ES5
+        let quote = "";
+        quote += '"You had me at \'meat tornado\'" - '
+        quote += fName + " " + lName
+        console.log(quote);
+    */
+    /* ES6 Template Strings
+    let easierQuote = `"You had me at 'meat tornado'" - ${fName} ${lName}`
+    let balance = `You have $${amount}.00 in your account.`
+    console.log(easierQuote)
+    console.log(balance)
+    */
+    // let items = ['apple', 'grape', 'orange']
+    // let itemsHTML = `
+    //     <ul>
+    //         <li>${items[0]}</li>
+    //         <li>${items[1]}</li>
+    //         <li>${items[2]}</li>
+    //     </ul>
+    // `
+    // console.log(itemsHTML)
+    // document.querySelector('ul').replace(itemsHTML)
+
+
+    // const numbers = ['one', 'two', 'three']
+    /* For loop version
+
+    numbers.forEach(function (number){
+        console.log(number)
+    })
+    */
+    /* forEach loop version
+    numbers.forEach(function(number) {
+        console.log(number)
+    })
+    */
+    /* for of loop
+    for (let number of numbers) {
+        console.log(number)
+    }
+    */
+    // Same function written 5 ways:
+    // 1.
+    function addOne(arg1) {
+        return arg1 + 1;
+    }
+    // 2.
+    let addOneA = function (arg1){
+        return arg1 + 1;
+    }
+    // 3.
+    let addOneB = (arg1) => {
+        return arg1 + 1;
+    }
+    // 4.
+    let addOneC = (arg1) => arg1 + 1;
+    // 5.
+    let addOneD = arg1 => arg1 + 1;
+
+    const addNames = function (fName, lName){
+        return `${fName} ${lName}`;
+    };
+
+    const addNames2 = (fName, lName) => `${fName} ${lName}`;
+
+    // let breed = 'Pug';
+    // let age = 3;
+    // let name = "Lexie"
+    // let isCute = true;
+
+    // var dog = {
+    //     breed: breed,
+    //     age: age,
+    //     name: name,
+    //     isCute: isCute
+    // };
+    // const dog = {
+    //     breed,
+    //     age,
+    //     name,
+    //     isCute
+    // };
+    const puppy = {
+        breed: 'Labrador',
+        age: 10,
+        name: 'Sabrina',
+        isCute: true
+    }
+    let {breed, age, name, isCute} = puppy;
+    // console.log(breed);
+    // console.log(age);
+    // console.log(name);
+    // console.log(isCute);
+
+    let cats = ['CJ', 'Claude', 'Max']
+    let [cat1, cat2, cat3] = cats
+    // console.log(cat1)
+    // console.log(cat2)
+    // console.log(cat3)
+
+    const getArea = ({height, width}) => height * width;
+    let shape = {
+        height: 20,
+        width: 10
+    }
+
+    let height = 30;
+    let width = 10;
+
+    // console.log(getArea({height, width}));
+    // console.log(getArea(shape));
+
+</script>
+</body>
+</html>

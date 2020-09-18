@@ -12,14 +12,21 @@
     </main>
 
     <script>
-        /* My solution:
+        /* My solution: */
         let last = {lName: "smith"};
         var fName = document.querySelectorAll('div')
 
         for (var i = 0; i < fName.length; i++){
-            console.log(fName[i].innerText.toLowerCase().charAt(0).toUpperCase() + fName[i].innerText.toLowerCase().slice(1) + ' ' + last.lName.charAt(0).toUpperCase() + last.lName.slice(1));
             fName[i].innerText = fName[i].innerText.toLowerCase().charAt(0).toUpperCase() + fName[i].innerText.toLowerCase().slice(1) + ' ' + last.lName.charAt(0).toUpperCase() + last.lName.slice(1)
         }
+
+        /* Blossom's solution:
+        const name = {lName: "smith"};
+        const upperCase = (name) => name[0].toUpperCase().concat(name.slice(1).toLowerCase());
+
+        document.querySelectorAll('div').forEach((div) => {
+            return div.innerText = `${upperCase(div.textContent)} ${upperCase(name.lName)}`
+        })
         */
 
         /* Justin's solution:
@@ -33,14 +40,7 @@
                 }
             }
             convertNodes(fullName, divs);
-        */
-        /* Blossom's solution:
-        const name = {lName: "smith"};
-        const upperCase = (name) => name[0].toUpperCase().concat(name.slice(1).toLowerCase());
-
-        document.querySelectorAll('div').forEach((div) => {
-            return div.innerText = `${upperCase(div.textContent)} ${upperCase(name.lName)}`
-        })
+        }
         */
     </script>
 </body>
