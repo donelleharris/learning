@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Refactor Warmup</title>
+</head>
+<body>
+<h1>Refactor Warmup</h1>
+<script>
+    "use strict";
+
+    const users = [
+        {
+            firstName: "Justin",
+            lastName: "Reich"
+        },
+        {
+            firstName: "Daniel",
+            lastName: "Fryar"
+        },
+        {
+            firstName: "Ryan",
+            lastName: "Orsinger"
+        },
+        {
+            firstName: "Vivian",
+            lastName: "Canalas"
+        }
+    ];
+
+    /**
+     * Refactor this function
+     * @param users
+     * @returns {[]}
+     */
+    let getFullNames = users.map(user => {
+        return `${user.firstName} ${user.lastName}`
+    });
+    console.log(getFullNames)
+    // var getFullNames = function(users) {
+    //     var output = [];
+    //     for (var i = 0; i < users.length; i += 1) {
+    //         var user = users[i];
+    //         output.push({
+    //             name: user.firstName + ' ' + user.lastName
+    //         });
+    //     }
+    //     return output;
+    // }
+
+    // console.log(getFullNames(users));
+
+</script>
+</body>
+</html>
